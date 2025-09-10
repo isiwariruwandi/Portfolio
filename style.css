@@ -1412,6 +1412,51 @@ header ul a:hover{
     }
 }
 
+@media screen and (min-width: 767px) and (orientation: landscape) {
+    .hero {
+        min-height: 80vh;
+        padding: 60px 40px 40px;
+    }
+    
+    .profile-img {
+        width: clamp(160px, 16vw, 200px);
+        height: clamp(160px, 16vw, 200px);
+    }
+    
+    .blackhole-box video {
+        margin-top: 0;
+    }
+    
+    .scroll-down {
+        bottom: -35px;
+    }
+    
+    .autoBlur,
+    .fadein-left,
+    .gradient {
+        animation: none;
+    }
+    
+    .gradient {
+        background: linear-gradient(135deg, #00f5ff, #ff00f7);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    
+    #hero .hero-info,
+    #hero h1 {
+        animation: none !important;
+        transition: none !important;
+    }
+    
+    /* Disable AOS animations on landscape */
+    #hero [data-aos] {
+        opacity: 1 !important;
+        transform: none !important;
+    }
+}
+
 /* High DPI displays */
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
     .profile-img img,
